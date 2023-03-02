@@ -1,6 +1,17 @@
 import java.util.Scanner;
+/**
+ * Clase Criba:
+ * Dado un número, imprimer dos arrays. El primero con todos los enteros y el segundo únicamente
+ * los primos hasta el número especificado
+ * @author Andrei Cosmin Calancea
+ * @version 1.2
+ */
 public class Criba {
-
+    /**
+     * Función que genera los números primos desde el 2 hasta el número máximo especificado
+     * @return un array de integers primos
+     * @param numeroMaximo último número al que llegar para determinar los números primos
+     */
     public static int[] generarPrimos(int numeroMaximo) {
 
         int i;
@@ -45,7 +56,10 @@ public class Criba {
             return new int[0];
         }
     }
-
+    /**
+     * Función que solicita un número, imprime los enteros hasta ese número y los primos hasta el
+     * mismo número
+     */
     public static void main(String[] args) {
 
         Scanner teclado = new Scanner(System.in);
@@ -62,7 +76,7 @@ public class Criba {
             }
             System.out.print(i + 1 + "\t");
         }
-
+        // Determinamos los números primos
         vector = generarPrimos(dato);
         System.out.println("\nVector de primos hasta:" + dato);
 
